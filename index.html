@@ -17,22 +17,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
-    (function() {
-      emailjs.init('vJUZu2TSOQff0qx2d'); 
+    (function () {
+      emailjs.init('vJUZu2TSOQff0qx2d');
     })();
-    
+
     function sendEmail() {
       const form = document.querySelector('.contact-form');
       emailjs.sendForm('service_03f6iwl', 'template_aoeauvq', form)
-        .then(function(response) {
+        .then(function (response) {
           console.log('Email sent successfully:', response);
           alert('Message sent successfully!');
           form.reset();
-        }, function(error) {
+        }, function (error) {
           console.error('Error sending email:', error);
           alert('Failed to send message. Please try again later.');
         });
-      return false; 
+      return false;
     }
   </script>
 </head>
@@ -44,7 +44,8 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo-pfe.png" style="width: 172px ;height: 155px;" onclick="window.location.href = 'http://createch.tn';" alt="Funel logo">
+        <img src="./assets/images/logo-pfe.png" style="width: 172px ;height: 155px;"
+          onclick="window.location.href = 'http://createch.tn';" alt="logo">
       </a>
 
       <div class="navbar-wrapper">
@@ -60,26 +61,24 @@
             <li class="nav-item">
               <a href="#home" class="nav-link">Accueil</a>
             </li>
-          
+
             <li class="nav-item">
               <a href="#about" class="nav-link">Ce que nous faisons</a>
             </li>
-          
+
             <li class="nav-item">
               <a href="#features" class="nav-link">Pourquoi nous ?</a>
             </li>
-          
+
             <li class="nav-item">
-              <a onclick="window.location.href = 'http://createch.tn';" class="nav-link" style="cursor: pointer !important;">Nos réalisations</a>
+              <a onclick="window.location.href = 'http://createch.tn';" class="nav-link"
+                style="cursor: pointer !important;">Nos réalisations</a>
             </li>
-          
+
             <li class="nav-item">
               <a href="#contact" class="nav-link">Contact</a>
             </li>
-          
           </ul>
-          
-
         </nav>
 
       </div>
@@ -89,185 +88,142 @@
   </header>
 
 
-
-
-
   <main>
 
     <article>
-
-      <!-- 
-        - #HERO
-      -->
-
       <section class="hero" id="home">
         <div class="container">
-      
           <div class="hero-content">
-      
             <h1 class="h1 hero-title">Votre solution complète de gestion RH</h1>
-      
             <p class="hero-text">
-              Gérez efficacement vos ressources humaines avec notre microservice intégré qui offre un chat en temps réel, la gestion des congés, des absences, et bien plus encore.
+              Gérez efficacement vos ressources humaines avec notre microservice intégré qui offre un chat en temps
+              réel, la gestion des congés, des absences, et bien plus encore.
             </p>
-      
-            <button class="btn btn-primary" onclick="window.location.href = 'http://localhost:4200';">Commencez dès maintenant</button>
-      
+            <button class="btn btn-primary" onclick="window.location.href = 'http://localhost:4200';">Commencez dès
+              maintenant</button>
+
           </div>
-      
+
           <div class="hero-banner"></div>
-      
+
         </div>
       </section>
-      
-
-
       <section class="about" id="about">
         <div class="container">
-      
           <div class="about-top">
-      
             <h2 class="h2 section-title">Ce que nous faisons</h2>
-      
             <p class="section-text">
-              Notre microservice offre une solution complète pour la gestion des ressources humaines, incluant un chat en temps réel, la gestion des congés, des absences et bien plus encore, tout en fournissant des analyses generales pour optimiser la performance de votre entreprise.
+              Notre microservice offre une solution complète pour la gestion des ressources humaines, incluant un chat
+              en temps réel, la gestion des congés, des absences et bien plus encore, tout en fournissant des analyses
+              generales pour optimiser la performance de votre entreprise.
             </p>
-      
             <ul class="about-list">
-      
               <li>
                 <div class="about-card">
-      
                   <div class="card-icon">
                     <ion-icon name="chatbubbles-outline"></ion-icon>
                   </div>
-      
                   <h3 class="h3 card-title">Chat en Temps Réel</h3>
-      
                   <p class="card-text">
-                    Facilitez la communication entre vos employés grâce à notre service de chat intégré, qui permet l'envoi de messages vocaux, de pièces jointes et plus encore.
+                    Facilitez la communication entre vos employés grâce à notre service de chat intégré, qui permet
+                    l'envoi de messages vocaux, de pièces jointes et plus encore.
                   </p>
-      
                 </div>
               </li>
-      
+
               <li>
                 <div class="about-card">
-      
                   <div class="card-icon">
                     <ion-icon name="briefcase-outline"></ion-icon>
                   </div>
-      
                   <h3 class="h3 card-title">Gestion des Ressources Humaines</h3>
-      
                   <p class="card-text">
-                    Gérez efficacement les congés, les absences, les fiches de paie et les évaluations de performance avec notre système automatisé et intuitif.
+                    Gérez efficacement les congés, les absences, les fiches de paie et les évaluations de performance
+                    avec notre système automatisé et intuitif.
                   </p>
-      
                 </div>
               </li>
-      
+
               <li>
                 <div class="about-card">
-      
                   <div class="card-icon">
                     <ion-icon name="stats-chart-outline"></ion-icon>
                   </div>
-      
                   <h3 class="h3 card-title">Analyses et Rapports</h3>
-      
                   <p class="card-text">
-                    Obtenez des insights précieux sur les performances de vos employés et des prévisions sur les augmentations de salaire grâce à nos outils d'analyse avancés.
+                    Obtenez des insights précieux sur les performances de vos employés et des prévisions sur les
+                    augmentations de salaire grâce à nos outils d'analyse avancés.
                   </p>
-      
                 </div>
               </li>
-      
             </ul>
-      
           </div>
-      
           <div class="about-bottom">
-      
             <figure class="about-bottom-banner">
               <img src="./assets/images/about-banner.png" alt="about banner" class="about-banner">
             </figure>
-      
+
             <div class="about-bottom-content">
-      
+
               <h2 class="h2 section-title">Nous sommes obsédés par la croissance</h2>
-      
+
               <p class="section-text">
-                Notre objectif est de fournir les outils nécessaires pour que votre entreprise puisse grandir et prospérer en optimisant la gestion de vos ressources humaines.
+                Notre objectif est de fournir les outils nécessaires pour que votre entreprise puisse grandir et
+                prospérer en optimisant la gestion de vos ressources humaines.
               </p>
-      
+
               <button class="btn btn-secondary">Inscrivez-vous gratuitement</button>
-      
+
             </div>
-      
+
           </div>
-      
+
         </div>
       </section>
-      
-
-
-
       <section class="features" id="features">
         <div class="container">
-    
-          <h2 class="h2 section-title">Notre équipe est composée de personnes talentueuses et créatives qui adorent le développement.</h2>
-    
+
+          <h2 class="h2 section-title">Notre équipe est composée de personnes talentueuses et créatives qui adorent le
+            développement.</h2>
+
           <p class="section-text">
-            Chaque membre de notre équipe apporte une perspective unique, enrichissant ainsi notre capacité à fournir des solutions RH innovantes.
+            Chaque membre de notre équipe apporte une perspective unique, enrichissant ainsi notre capacité à fournir
+            des solutions RH innovantes.
           </p>
-    
           <ul class="features-list">
-    
-            
-    
             <li class="features-item">
-    
               <figure class="features-item-banner">
                 <img src="./assets/images/feature-2.png" alt="feature banner">
               </figure>
-    
               <div class="feature-item-content">
                 <h3 class="h2 item-title">Conformité aux Lois de Finances</h3>
-    
                 <p class="item-text">
-                  Assurez-vous que votre entreprise respecte les dernières lois de finances avec notre outil de conformité intégré.
+                  Assurez-vous que votre entreprise respecte les dernières lois de finances avec notre outil de
+                  conformité intégré.
                 </p>
               </div>
-    
             </li>
             <li class="features-item">
-    
+
               <figure class="features-item-banner">
                 <img src="./assets/images/feature-1.png" alt="feature banner">
               </figure>
-    
+
               <div class="feature-item-content">
                 <h3 class="h2 item-title">Gestion des Modules RH</h3>
-    
+
                 <p class="item-text">
-                  Gérez facilement les fiches de paie, les déductions ,les absences,les autorisations,les enfants,et les primes de vos employés grâce à notre système automatisé.
+                  Gérez facilement les fiches de paie, les déductions ,les absences,les autorisations,les enfants,et les
+                  primes de vos employés grâce à notre système automatisé.
                 </p>
               </div>
-    
+
             </li>
-            
+
           </ul>
-    
+
         </div>
       </section>
-
-
-      
-
-
-
-
       <section class="contact" id="contact">
         <div class="container">
 
@@ -284,46 +240,38 @@
               <label for="name" class="input-label">Nom *</label>
               <input type="text" name="name" id="name" required placeholder="Type Name" class="input-field">
             </div>
-      
+
             <div class="input-wrapper">
               <label for="phone" class="input-label">Telephone</label>
               <input type="tel" name="phone" id="phone" placeholder="Type Phone Number" class="input-field">
             </div>
-      
+
             <div class="input-wrapper">
               <label for="email" class="input-label">Adresse Email*</label>
               <input type="email" name="email" id="email" required placeholder="Type Email Address" class="input-field">
             </div>
-      
+
             <div class="input-wrapper">
               <label for="description" class="input-label">Comment pouvons nous aider? *</label>
-              <textarea name="description" id="description" placeholder="Type Description" required class="input-field"></textarea>
+              <textarea name="description" id="description" placeholder="Type Description" required
+                class="input-field"></textarea>
             </div>
-      
+
             <button type="submit" class="btn btn-primary">Envoyer Message</button>
           </form>
-
         </div>
       </section>
-
     </article>
-
   </main>
 
-
-
-
-
-
   <footer>
-
     <div class="footer-top">
       <div class="container">
 
-        <div class="footer-brand">
+        <!-- <div class="footer-brand">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo-createch-light.png" onclick="window.location.href = 'http://createch.tn';" alt="Funel logo">
+            <img src="./assets/images/logo-createch-light.png" onclick="window.location.href = 'http://createch.tn';" alt="logo">
           </a>
 
           <p class="footer-text">Follow us on</p>
@@ -344,7 +292,7 @@
 
           </ul>
 
-        </div>
+        </div> -->
 
         <div class="footer-link-box">
           <ul class="footer-link-list">
@@ -353,10 +301,7 @@
 
       </div>
     </div>
-
-
   </footer>
-
 
   <a href="#top" class="go-top active" data-go-top>
     <ion-icon name="chevron-up-outline"></ion-icon>
