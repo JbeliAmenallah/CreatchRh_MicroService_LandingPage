@@ -15,6 +15,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init('vJUZu2TSOQff0qx2d'); 
+    })();
+    
+    function sendEmail() {
+      const form = document.querySelector('.contact-form');
+      emailjs.sendForm('service_03f6iwl', 'template_aoeauvq', form)
+        .then(function(response) {
+          console.log('Email sent successfully:', response);
+          alert('Message sent successfully!');
+          form.reset();
+        }, function(error) {
+          console.error('Error sending email:', error);
+          alert('Failed to send message. Please try again later.');
+        });
+      return false; 
+    }
+  </script>
 </head>
 
 <body id="top">
@@ -24,7 +44,7 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo-createch-light.png" alt="Funel logo">
+        <img src="./assets/images/logo-pfe.png" style="width: 172px ;height: 155px;" onclick="window.location.href = 'http://createch.tn';" alt="Funel logo">
       </a>
 
       <div class="navbar-wrapper">
@@ -259,35 +279,28 @@
             </figure>
           </div>
 
-          <form action="" class="contact-form">
-
+          <form action="#" class="contact-form" onsubmit="return sendEmail();">
             <div class="input-wrapper">
               <label for="name" class="input-label">Nom *</label>
-
               <input type="text" name="name" id="name" required placeholder="Type Name" class="input-field">
             </div>
-
+      
             <div class="input-wrapper">
               <label for="phone" class="input-label">Telephone</label>
-
               <input type="tel" name="phone" id="phone" placeholder="Type Phone Number" class="input-field">
             </div>
-
+      
             <div class="input-wrapper">
               <label for="email" class="input-label">Adresse Email*</label>
-
               <input type="email" name="email" id="email" required placeholder="Type Email Address" class="input-field">
             </div>
-
+      
             <div class="input-wrapper">
-              <label for="message" class="input-label">Comment pouvons nous aider? *</label>
-
-              <textarea name="message" id="message" placeholder="Type Description" required
-                class="input-field"></textarea>
+              <label for="description" class="input-label">Comment pouvons nous aider? *</label>
+              <textarea name="description" id="description" placeholder="Type Description" required class="input-field"></textarea>
             </div>
-
+      
             <button type="submit" class="btn btn-primary">Envoyer Message</button>
-
           </form>
 
         </div>
@@ -310,7 +323,7 @@
         <div class="footer-brand">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo-createch-light.png" alt="Funel logo">
+            <img src="./assets/images/logo-createch-light.png" onclick="window.location.href = 'http://createch.tn';" alt="Funel logo">
           </a>
 
           <p class="footer-text">Follow us on</p>
@@ -334,17 +347,8 @@
         </div>
 
         <div class="footer-link-box">
-
           <ul class="footer-link-list">
-<!-- 
-            <li>
-              <h3 class="h4 link-title">Entreprise</h3>
-            </li> -->
-
           </ul>
-
-         
-
         </div>
 
       </div>
@@ -357,7 +361,6 @@
   <a href="#top" class="go-top active" data-go-top>
     <ion-icon name="chevron-up-outline"></ion-icon>
   </a>
-
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
